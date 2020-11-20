@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculation</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <script type="text/javascript">
+    function updateTextbox(value) {
+      document.getElementById("screen").value += value;
+    }
+
+    function result() {
+      document.getElementById("screen").value = eval(
+        document.getElementById("screen").value
+      );
+    }
+
+    function reset() {
+      document.getElementById("screen").value = "";
+    }
+  </script>
+  <body>
+    <form name="myForm">
+      <table border="2">
+        <tr>
+          <td align="center">
+            <input type="text" id="screen" name="screen" style="width: 90%" />
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              name="7"
+              value="  7  "
+              onclick="updateTextbox(7)"
+            />
+            <input
+              type="button"
+              name="8"
+              value="  8  "
+              onclick="updateTextbox(8)"
+            />
+            <input
+              type="button"
+              name="9"
+              value="  9  "
+              onclick="updateTextbox(9)"
+            />
+            <input
+              type="button"
+              name="+"
+              value="  +  "
+              onclick="updateTextbox('+')"
+            />
+            <br />
+            <input
+              type="button"
+              name="4"
+              value="  4  "
+              onclick="updateTextbox(4)"
+            />
+            <input
+              type="button"
+              name="5"
+              value="  5  "
+              onclick="updateTextbox(5)"
+            />
+            <input
+              type="button"
+              name="6"
+              value="  6  "
+              onclick="updateTextbox(6)"
+            />
+            <input
+              type="button"
+              name="-"
+              value="  -  "
+              onclick="updateTextbox('-')"
+            />
+            <br />
+            <input
+              type="button"
+              name="1"
+              value="  1  "
+              onclick="updateTextbox(1)"
+            />
+            <input
+              type="button"
+              name="2"
+              value="  2  "
+              onclick="updateTextbox(2)"
+            />
+            <input
+              type="button"
+              name="3"
+              value="  3  "
+              onclick="updateTextbox(3)"
+            />
+            <input
+              type="button"
+              name="*"
+              value="  x  "
+              onclick="updateTextbox('*')"
+            />
+            <br />
+            <input type="button" name="c" value="  c  " onclick="reset();" />
+            <input
+              type="button"
+              name="0"
+              value="  0  "
+              onclick="updateTextbox(0)"
+            />
+            <input type="button" name="=" value="  =  " onclick="result();" />
+            <input
+              type="button"
+              name="/"
+              value="  /  "
+              onclick="updateTextbox('/')"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
